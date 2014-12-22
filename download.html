@@ -1,0 +1,23 @@
+<html>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+	        $.ajax({
+            url: "http://www.pgyer.com/balabala",
+            type: "post",
+            data: ({password: 'zucc'}),
+            dataType: "json",
+            async: true,
+            success: function (msg) {
+                if (msg.code==0) {
+                	location.href = 'http://www.pgyer.com/app/install/11be7e9b469f1f35ab778550e9090baf';
+                }
+                else {
+                    alert("应用获取失败!");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取应用失败！");
+            }
+        });
+</script>
+</html>
